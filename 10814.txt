@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+#include <map>
+using namespace std;
+
+int main() {
+	int N, age;
+	string name;
+	multimap<int, string> member;
+
+	cin >> N;
+	for(int i = 0; i < N; i++) {
+		cin >> age >> name;
+		member.insert(make_pair(age, name));
+	}
+
+	for(auto& it : member) {
+		cout << it.first << " " << it.second << endl;
+	}
+
+	return 0;
+}
